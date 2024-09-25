@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Share-IT</div>
+      <div class="nav-items">
+        <a href="/">Home</a>
+        <a href="/">About</a>
+        <a href="/">Contact</a>
+      </div>
+    </nav>
+    
+    <section class="hero">
+      <div class="hero-container">
+        <div class="column-left">
+          <h1>Send Unlimited Messages</h1>
+          <p>No contracts or unwanted fees. Exclusive offer for new customers only.</p>
+          <button>Get Started</button>
+        </div>
+        <div class="column-right">
+          <img src="./static/image.svg" alt="illustration" class="hero-image" />
+        </div>
+      </div>
+    </section>
+    
+    <section class="dynamic-content">
+      <h2>Dynamic Content</h2>
+      <p>The current time is: {{ time }}</p>
+      <p>Random Quote: "{{ quote }}"</p>
+    </section>
+    
+    <section class="form-section">
+      <h2>User Detail Form</h2>
+      <form action="/submit" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="phone">Phone Number (10 digits):</label>
+        <input type="tel" id="phone" name="phone" pattern="\d{10}" title="Please enter a valid 10-digit phone number" required><br><br>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+          <option value="prefer-not-say">Prefer Not to Say</option>
+        </select><br><br>
+        
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" name="nationality" required><br><br>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br><br>
+        
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" pattern="\d{6}" title="Please enter a valid 6-digit pincode" required><br><br>
+        
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required><br><br>
+        
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required><br><br>
+        
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+
+    <section class="view-submissions">
+      <h2>View Stored Submissions</h2>
+      <p><a href="/submissions">Click here to view all submitted forms</a></p>
+    </section>
+    
+    <footer>
+      <p>Contact Information: sonisaptak@gmail.com | +91 982401601</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submissions</title>
+  </head>
+  <body>
+    <h1>Form Submissions</h1>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Gender</th>
+        <th>Nationality</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Pincode</th>
+        <th>State</th>
+        <th>Country</th>
+      </tr>
+      {% for submission in submissions %}
+      <tr>
+        <td>{{ submission[0] }}</td>
+        <td>{{ submission[1] }}</td>
+        <td>{{ submission[2] }}</td>
+        <td>{{ submission[3] }}</td>
+        <td>{{ submission[4] }}</td>
+        <td>{{ submission[5] }}</td>
+        <td>{{ submission[6] }}</td>
+        <td>{{ submission[7] }}</td>
+        <td>{{ submission[8] }}</td>
+        <td>{{ submission[9] }}</td>
+        <td>{{ submission[10] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
